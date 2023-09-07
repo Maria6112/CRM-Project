@@ -15,10 +15,10 @@ function getList () {
     fetch(apiURL)
         .then((res) => res.json())
         .then((data) => {
-            hideSpinner();
             addList(data.data);
         })
-        .catch((error) => console.log('Error fetching data:', error));
+        .catch((error) => alert('Error fetching data: ' + error))
+        .finally(() => hideSpinner());
 }
 
 function addList(users) {
