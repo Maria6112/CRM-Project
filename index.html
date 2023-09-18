@@ -5,10 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Costumers</title>
+    <title>Customers</title>
   </head>
   <body>
-    <h1 style="font-size: 50px;">Costumers List</h1>
+    <h1 style="font-size: 50px;">Customers List</h1>
+
+    <div class="container">
+      
+      <div class="filter">
+        <input
+          type="search"
+          class="form-input-filter"
+          id="filter-input"
+          placeholder="Text input"
+        />
+      </div>
+      <div id="gender-div">
+        <p style="margin-bottom: 0px;">Filter by gender</p><br>
+        <select id="gender-filter">
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="birthday" id="birthday-div">
+        <p>Filter by birthday</p>
+        <input type="date" id="birthday-filter" name="birthday">
+      </div>
+        
+      <button class="btn" id="filter-btn" type="submit">Filter</button>
+    </div>
+    
     <div id="loader" class="spinner"></div>
     <table id="user-table">
         <tr>
@@ -24,7 +51,9 @@
         <!--<td>></td>-->
         </tbody>
     </table>
+    <div id="alert"></div>
 
     <script src="./script.js"></script>
   </body>
 </html>
+
