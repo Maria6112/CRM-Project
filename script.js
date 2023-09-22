@@ -5,7 +5,7 @@ const filterBtn = document.getElementById('filter-btn');
 const spinner = document.getElementById('loader');
 const usersTable = document.getElementById('user-table');
 const usersData = document.getElementById('user-data');
-const apiUrl = 'https://fakerapi.it/api/v1/persons?_quantity=100&_gender=female&_birthday_start=2005-01-01';
+const apiUrl = 'https://fakerapi.it/api/v1/persons?_quantity=100&_gender=&_birthday_start=2005-01-01';
 let customers = [];
 
 function showSpinner() {
